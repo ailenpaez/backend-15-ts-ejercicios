@@ -28,9 +28,14 @@ interface Admin {
 	role: string;
 }
 
-type Person = unknown;
+interface Person {
+	name: string,
+	age?: number,
+	occupation?: string;
+	role?: string;
+}
 
-const persons: unknown = [
+const persons: Person[] = [
 	{
 		name: 'Max Mustermann',
 		age: 25,
@@ -53,7 +58,7 @@ const persons: unknown = [
 	},
 ];
 
-function logPerson(user: unknown) {
+function logPerson(user: Person) {
 	console.log(` - ${user.name}, ${user.age}`);
 }
 
