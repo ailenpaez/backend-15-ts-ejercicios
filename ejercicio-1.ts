@@ -8,11 +8,11 @@ Ejercicio:
 
 */
 
-type User = unknown;
+interface User {name:string;age:number;occupation:string}
 
-const users: unknown[] = [
+const users: User[] = [
 	{
-		name: 'Max Mustermann',
+		name: "Max Mustermann",
 		age: 25,
 		occupation: 'Chimney sweep',
 	},
@@ -23,12 +23,12 @@ const users: unknown[] = [
 	},
 ];
 
-function logPerson(user: unknown) {
+function Person(user: User) {
 	console.log(` - ${user.name}, ${user.age}`);
 }
 
 console.log('Users:');
-users.forEach(logPerson);
+users.forEach(Person);
 
 // En caso de que estés trabada:
 // https://www.typescriptlang.org/docs/handbook/2/objects.html
