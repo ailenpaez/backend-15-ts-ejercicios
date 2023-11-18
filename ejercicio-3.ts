@@ -62,10 +62,10 @@ function printPerson(person: PersonType) {
 
 	if (person.role) {
 		additionalInformation = person.role;
-		console.log("-> THIS_PERSON_IS_ADMIN:(role)");
+		console.log(`-> THIS_PERSON_IS_ADMIN:(role-->${person.role})`);
 	} else {
 		additionalInformation = person.occupation;
-		console.log('-> THIS_PERSON_IS_USER:(occupation)');
+		console.log(`-> THIS_PERSON_IS_USER:(occupation-->${person.occupation})`);
 	}
 
 	console.log(` - ${person.name}, ${person.age}, ${additionalInformation}`);
