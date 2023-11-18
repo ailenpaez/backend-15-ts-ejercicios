@@ -26,7 +26,12 @@ interface Admin {
 	role: string;
 }
 
-type PersonType = unknown;
+interface PersonType {
+	name: string,
+	age: number,
+	occupation?: string,
+	role?: string
+}
 
 const personsCollection: PersonType[] = [
 	{
@@ -52,12 +57,15 @@ const personsCollection: PersonType[] = [
 ];
 
 function printPerson(person: PersonType) {
-	let additionalInformation: string;
+	let additionalInformation: string | undefined;
+	//        occupation para el usuario y role para el admin.
 
 	if (person.role) {
 		additionalInformation = person.role;
+		console.log("-> THIS_PERSON_IS_ADMIN:(role)");
 	} else {
 		additionalInformation = person.occupation;
+		console.log('-> THIS_PERSON_IS_USER:(occupation)');
 	}
 
 	console.log(` - ${person.name}, ${person.age}, ${additionalInformation}`);
