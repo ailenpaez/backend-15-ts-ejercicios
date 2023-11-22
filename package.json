@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "ej:1": "ts-node ejercicio-1.ts",
-    "ej:2": "ts-node ejercicio-2.ts",
-    "ej:3": "ts-node ejercicio-3.ts",
-    "build": "tsc"
+    "dev-1": "ts-node ejercicio-1.ts",
+    "dev-2": "ts-node ejercicio-2.ts",
+    "dev-3": "ts-node ejercicio-3.ts",
+    "compile": "tsc"
   },
   "keywords": [],
   "author": "",
